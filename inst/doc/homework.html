@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="author" content="Yanlong Zhao" />
+
+
+<title>Homework</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Homework</h1>
+<h4 class="author">Yanlong Zhao</h4>
+
+
+
+<div id="section" class="section level2">
+<h2>5.4</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Clear memory</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co"># Function to generate random samples from Beta(3, 3)</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>generate_samples <span class="ot">&lt;-</span> <span class="cf">function</span>(n) {</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">rbeta</span>(n, <span class="dv">3</span>, <span class="dv">3</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>}</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="co"># Function to estimate the CDF using Monte Carlo simulation</span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>monte_carlo_estimate <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">n_samples =</span> <span class="dv">10000</span>) {</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>  samples <span class="ot">&lt;-</span> <span class="fu">generate_samples</span>(n_samples)</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">mean</span>(samples <span class="sc">&lt;=</span> x))</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>}</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="co"># Function to compare Monte Carlo estimates with pbeta</span></span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>compare_estimates <span class="ot">&lt;-</span> <span class="cf">function</span>(x_values) {</span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a>  monte_carlo_results <span class="ot">&lt;-</span> <span class="fu">sapply</span>(x_values, monte_carlo_estimate)</span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>  pbeta_results <span class="ot">&lt;-</span> <span class="fu">pbeta</span>(x_values, <span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a>  </span>
+<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a>  results <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x_values, </span>
+<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a>                        <span class="at">Monte_Carlo_Estimate =</span> monte_carlo_results, </span>
+<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a>                        <span class="at">pbeta_Value =</span> pbeta_results)</span>
+<span id="cb1-23"><a href="#cb1-23" tabindex="-1"></a>  </span>
+<span id="cb1-24"><a href="#cb1-24" tabindex="-1"></a>  <span class="fu">return</span>(results)</span>
+<span id="cb1-25"><a href="#cb1-25" tabindex="-1"></a>}</span>
+<span id="cb1-26"><a href="#cb1-26" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" tabindex="-1"></a><span class="co"># Values to estimate</span></span>
+<span id="cb1-28"><a href="#cb1-28" tabindex="-1"></a>x_values <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="at">by =</span> <span class="fl">0.1</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" tabindex="-1"></a><span class="co"># Compare estimates</span></span>
+<span id="cb1-31"><a href="#cb1-31" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">compare_estimates</span>(x_values)</span>
+<span id="cb1-32"><a href="#cb1-32" tabindex="-1"></a><span class="fu">print</span>(results)</span>
+<span id="cb1-33"><a href="#cb1-33" tabindex="-1"></a><span class="co">#&gt;     x Monte_Carlo_Estimate pbeta_Value</span></span>
+<span id="cb1-34"><a href="#cb1-34" tabindex="-1"></a><span class="co">#&gt; 1 0.1               0.0106     0.00856</span></span>
+<span id="cb1-35"><a href="#cb1-35" tabindex="-1"></a><span class="co">#&gt; 2 0.2               0.0576     0.05792</span></span>
+<span id="cb1-36"><a href="#cb1-36" tabindex="-1"></a><span class="co">#&gt; 3 0.3               0.1602     0.16308</span></span>
+<span id="cb1-37"><a href="#cb1-37" tabindex="-1"></a><span class="co">#&gt; 4 0.4               0.3181     0.31744</span></span>
+<span id="cb1-38"><a href="#cb1-38" tabindex="-1"></a><span class="co">#&gt; 5 0.5               0.5016     0.50000</span></span>
+<span id="cb1-39"><a href="#cb1-39" tabindex="-1"></a><span class="co">#&gt; 6 0.6               0.6860     0.68256</span></span>
+<span id="cb1-40"><a href="#cb1-40" tabindex="-1"></a><span class="co">#&gt; 7 0.7               0.8377     0.83692</span></span>
+<span id="cb1-41"><a href="#cb1-41" tabindex="-1"></a><span class="co">#&gt; 8 0.8               0.9439     0.94208</span></span>
+<span id="cb1-42"><a href="#cb1-42" tabindex="-1"></a><span class="co">#&gt; 9 0.9               0.9912     0.99144</span></span></code></pre></div>
+</div>
+<div id="section-1" class="section level2">
+<h2>5.9</h2>
+<p><span class="math inline">\(F(x)=\int_0^{x} \frac{t}{\sigma^{2}} \
+e^{-\frac{t^{2}}{2 {\sigma^{2}}}} \,dt\)</span> is the cdf of Rayleigh
+distribution.Making the substitution <span class="math inline">\(y=t/x\)</span>, we have <span class="math inline">\(dt=xdy\)</span>, and <span class="math inline">\(F(x)=\int_0^{1} \frac{y x^{2}}{\sigma^{2}} \
+e^{-\frac{(yx)^{2}}{2 {\sigma^{2}}}} \,dy\)</span> ,where the random
+variable Y has the Uniform(0,1)</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># Clear memory</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co"># Function to compute the CDF of the Rayleigh distribution</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>calculate_cdf <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">sigma =</span> <span class="dv">2</span>) {</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>  <span class="dv">1</span> <span class="sc">-</span> <span class="fu">exp</span>(<span class="sc">-</span>((x)<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> (sigma<span class="sc">^</span><span class="dv">2</span>)))</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>}</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co"># Monte Carlo simulation without antithetic variables</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a>mc_simulation <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">r =</span> <span class="dv">10000</span>) {</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">runif</span>(r)</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a>  g <span class="ot">&lt;-</span> (y <span class="sc">*</span> x<span class="sc">^</span><span class="dv">2</span>) <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span>(y <span class="sc">*</span> x<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> (<span class="dv">2</span><span class="sc">^</span><span class="dv">2</span>)))</span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>  <span class="fu">mean</span>(g) <span class="sc">/</span> (<span class="dv">2</span><span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>}</span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="co"># Monte Carlo simulation with antithetic variables</span></span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a>mc_simulation_antithetic <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">r =</span> <span class="dv">10000</span>) {</span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">runif</span>(r <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a>  v <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> y</span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">c</span>(y, v)</span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a>  g <span class="ot">&lt;-</span> (y <span class="sc">*</span> x<span class="sc">^</span><span class="dv">2</span>) <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span>(y <span class="sc">*</span> x<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> (<span class="dv">2</span><span class="sc">^</span><span class="dv">2</span>)))</span>
+<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a>  <span class="fu">mean</span>(g) <span class="sc">/</span> (<span class="dv">2</span><span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a>}</span>
+<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a><span class="co"># Main code execution</span></span>
+<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.1</span>, <span class="fl">2.5</span>, <span class="at">length =</span> <span class="dv">10</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" tabindex="-1"></a>Phi <span class="ot">&lt;-</span> <span class="fu">calculate_cdf</span>(x)  <span class="co"># Results from Rayleigh(2) </span></span>
+<span id="cb2-30"><a href="#cb2-30" tabindex="-1"></a>MC1 <span class="ot">&lt;-</span> <span class="fu">sapply</span>(x, mc_simulation, <span class="at">r =</span> <span class="dv">10000</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" tabindex="-1"></a>MC2 <span class="ot">&lt;-</span> <span class="fu">sapply</span>(x, mc_simulation_antithetic, <span class="at">r =</span> <span class="dv">10000</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">round</span>(<span class="fu">rbind</span>(x, Phi, MC1, MC2), <span class="dv">5</span>)) <span class="co"># Comparison of estimates</span></span>
+<span id="cb2-34"><a href="#cb2-34" tabindex="-1"></a><span class="co">#&gt;        [,1]    [,2]    [,3]    [,4]    [,5]    [,6]    [,7]    [,8]    [,9]</span></span>
+<span id="cb2-35"><a href="#cb2-35" tabindex="-1"></a><span class="co">#&gt; x   0.10000 0.36667 0.63333 0.90000 1.16667 1.43333 1.70000 1.96667 2.23333</span></span>
+<span id="cb2-36"><a href="#cb2-36" tabindex="-1"></a><span class="co">#&gt; Phi 0.00125 0.01667 0.04890 0.09629 0.15645 0.22648 0.30320 0.38336 0.46392</span></span>
+<span id="cb2-37"><a href="#cb2-37" tabindex="-1"></a><span class="co">#&gt; MC1 0.00125 0.01651 0.04848 0.09376 0.15256 0.21933 0.28568 0.35361 0.41725</span></span>
+<span id="cb2-38"><a href="#cb2-38" tabindex="-1"></a><span class="co">#&gt; MC2 0.00125 0.01662 0.04848 0.09468 0.15201 0.21677 0.28518 0.35313 0.41635</span></span>
+<span id="cb2-39"><a href="#cb2-39" tabindex="-1"></a><span class="co">#&gt;       [,10]</span></span>
+<span id="cb2-40"><a href="#cb2-40" tabindex="-1"></a><span class="co">#&gt; x   2.50000</span></span>
+<span id="cb2-41"><a href="#cb2-41" tabindex="-1"></a><span class="co">#&gt; Phi 0.54217</span></span>
+<span id="cb2-42"><a href="#cb2-42" tabindex="-1"></a><span class="co">#&gt; MC1 0.47170</span></span>
+<span id="cb2-43"><a href="#cb2-43" tabindex="-1"></a><span class="co">#&gt; MC2 0.47213</span></span>
+<span id="cb2-44"><a href="#cb2-44" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" tabindex="-1"></a><span class="co"># Variance reduction assessment</span></span>
+<span id="cb2-46"><a href="#cb2-46" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb2-47"><a href="#cb2-47" tabindex="-1"></a>MC1_samples <span class="ot">&lt;-</span> <span class="fu">numeric</span>(m)</span>
+<span id="cb2-48"><a href="#cb2-48" tabindex="-1"></a>MC2_samples <span class="ot">&lt;-</span> <span class="fu">numeric</span>(m)</span>
+<span id="cb2-49"><a href="#cb2-49" tabindex="-1"></a>x_val <span class="ot">&lt;-</span> <span class="fl">1.65</span></span>
+<span id="cb2-50"><a href="#cb2-50" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>m) {</span>
+<span id="cb2-52"><a href="#cb2-52" tabindex="-1"></a>  MC1_samples[i] <span class="ot">&lt;-</span> <span class="fu">mc_simulation</span>(x_val, <span class="at">r =</span> <span class="dv">1000</span>)</span>
+<span id="cb2-53"><a href="#cb2-53" tabindex="-1"></a>  MC2_samples[i] <span class="ot">&lt;-</span> <span class="fu">mc_simulation_antithetic</span>(x_val, <span class="at">r =</span> <span class="dv">1000</span>)</span>
+<span id="cb2-54"><a href="#cb2-54" tabindex="-1"></a>}</span>
+<span id="cb2-55"><a href="#cb2-55" tabindex="-1"></a></span>
+<span id="cb2-56"><a href="#cb2-56" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">sd</span>(MC1_samples))</span>
+<span id="cb2-57"><a href="#cb2-57" tabindex="-1"></a><span class="co">#&gt; [1] 0.004372272</span></span>
+<span id="cb2-58"><a href="#cb2-58" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">sd</span>(MC2_samples))</span>
+<span id="cb2-59"><a href="#cb2-59" tabindex="-1"></a><span class="co">#&gt; [1] 0.000590776</span></span>
+<span id="cb2-60"><a href="#cb2-60" tabindex="-1"></a><span class="fu">print</span>((<span class="fu">var</span>(MC1_samples) <span class="sc">-</span> <span class="fu">var</span>(MC2_samples)) <span class="sc">/</span> <span class="fu">var</span>(MC1_samples))</span>
+<span id="cb2-61"><a href="#cb2-61" tabindex="-1"></a><span class="co">#&gt; [1] 0.9817429</span></span></code></pre></div>
+<p>We can see that the values generated from the simple Monte Carlo
+integration approach and the antithetic variable approach are very close
+to the Rayleigh(2) values.The antithetic variable approach achieved
+approximately 98.1% reduction in variance at x=1.65.</p>
+</div>
+<div id="section-2" class="section level2">
+<h2>5.13</h2>
+<p>The candidates for the improtance functions are <span class="math display">\[ f1= \frac{1}{\sqrt{2 \pi}{\sqrt{1.1}} }
+e^{-\frac{(x-2)^2}{2.2}} \]</span> <span class="math display">\[
+f2=4x^2e^{-2x}\]</span></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># Clear memory</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co"># Define the probability density functions</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>g_function <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>  (<span class="dv">1</span> <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">2</span> <span class="sc">*</span> pi)) <span class="sc">*</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">/</span> <span class="dv">2</span>) <span class="sc">*</span> (x <span class="sc">&gt;</span> <span class="dv">1</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>}</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>f1_function <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>  <span class="fu">dnorm</span>(x, <span class="dv">2</span>, <span class="fu">sqrt</span>(<span class="fl">1.1</span>))</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>}</span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>f2_function <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a>  <span class="fu">dgamma</span>(x, <span class="dv">3</span>, <span class="dv">2</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a>}</span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="co"># Plotting functions</span></span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a>plot_density_functions <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a>  g <span class="ot">&lt;-</span> <span class="fu">g_function</span>(x)</span>
+<span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a>  f1 <span class="ot">&lt;-</span> <span class="fu">f1_function</span>(x)</span>
+<span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a>  f2 <span class="ot">&lt;-</span> <span class="fu">f2_function</span>(x)</span>
+<span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a>  <span class="co"># Figure 1</span></span>
+<span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a>  <span class="fu">plot</span>(x, g, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">main =</span> <span class="st">&quot;&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.4</span>), <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a>  <span class="fu">lines</span>(x, f1, <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>  <span class="fu">lines</span>(x, f2, <span class="at">lty =</span> <span class="dv">3</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" tabindex="-1"></a>  <span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">&quot;g&quot;</span>, <span class="st">&quot;f1&quot;</span>, <span class="st">&quot;f2&quot;</span>), <span class="at">lty =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;black&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">inset =</span> <span class="fl">0.02</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" tabindex="-1"></a>  <span class="co"># Figure 2</span></span>
+<span id="cb3-30"><a href="#cb3-30" tabindex="-1"></a>  <span class="fu">plot</span>(x, g, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">main =</span> <span class="st">&quot;&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">3</span>), <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" tabindex="-1"></a>  <span class="fu">lines</span>(x, g <span class="sc">/</span> f1, <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
+<span id="cb3-32"><a href="#cb3-32" tabindex="-1"></a>  <span class="fu">lines</span>(x, g <span class="sc">/</span> f2, <span class="at">lty =</span> <span class="dv">3</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb3-33"><a href="#cb3-33" tabindex="-1"></a>  <span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">&quot;g&quot;</span>, <span class="st">&quot;f1&quot;</span>, <span class="st">&quot;f2&quot;</span>), <span class="at">lty =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;black&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">inset =</span> <span class="fl">0.02</span>)</span>
+<span id="cb3-34"><a href="#cb3-34" tabindex="-1"></a>}</span>
+<span id="cb3-35"><a href="#cb3-35" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" tabindex="-1"></a><span class="co"># Standard error calculation function</span></span>
+<span id="cb3-37"><a href="#cb3-37" tabindex="-1"></a>calculate_standard_errors <span class="ot">&lt;-</span> <span class="cf">function</span>(m) {</span>
+<span id="cb3-38"><a href="#cb3-38" tabindex="-1"></a>  se <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">2</span>)</span>
+<span id="cb3-39"><a href="#cb3-39" tabindex="-1"></a>  </span>
+<span id="cb3-40"><a href="#cb3-40" tabindex="-1"></a>  <span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb3-41"><a href="#cb3-41" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(m, <span class="dv">2</span>, <span class="fu">sqrt</span>(<span class="fl">1.1</span>))</span>
+<span id="cb3-42"><a href="#cb3-42" tabindex="-1"></a>  fg <span class="ot">&lt;-</span> <span class="fu">g_function</span>(x) <span class="sc">/</span> <span class="fu">f1_function</span>(x)</span>
+<span id="cb3-43"><a href="#cb3-43" tabindex="-1"></a>  se[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">sd</span>(fg)</span>
+<span id="cb3-44"><a href="#cb3-44" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="#cb3-45" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rgamma</span>(m, <span class="dv">3</span>, <span class="dv">2</span>)</span>
+<span id="cb3-46"><a href="#cb3-46" tabindex="-1"></a>  fg <span class="ot">&lt;-</span> <span class="fu">g_function</span>(x) <span class="sc">/</span> <span class="fu">f2_function</span>(x)</span>
+<span id="cb3-47"><a href="#cb3-47" tabindex="-1"></a>  se[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">sd</span>(fg)</span>
+<span id="cb3-48"><a href="#cb3-48" tabindex="-1"></a></span>
+<span id="cb3-49"><a href="#cb3-49" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">round</span>(se, <span class="dv">5</span>))</span>
+<span id="cb3-50"><a href="#cb3-50" tabindex="-1"></a>}</span>
+<span id="cb3-51"><a href="#cb3-51" tabindex="-1"></a></span>
+<span id="cb3-52"><a href="#cb3-52" tabindex="-1"></a><span class="co"># Monte Carlo estimate function</span></span>
+<span id="cb3-53"><a href="#cb3-53" tabindex="-1"></a>monte_carlo_estimate <span class="ot">&lt;-</span> <span class="cf">function</span>(m) {</span>
+<span id="cb3-54"><a href="#cb3-54" tabindex="-1"></a>  theta_hat <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">2</span>)</span>
+<span id="cb3-55"><a href="#cb3-55" tabindex="-1"></a>  </span>
+<span id="cb3-56"><a href="#cb3-56" tabindex="-1"></a>  <span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb3-57"><a href="#cb3-57" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(m, <span class="dv">2</span>, <span class="fu">sqrt</span>(<span class="fl">1.1</span>))</span>
+<span id="cb3-58"><a href="#cb3-58" tabindex="-1"></a>  fg <span class="ot">&lt;-</span> <span class="fu">g_function</span>(x) <span class="sc">/</span> <span class="fu">f1_function</span>(x)</span>
+<span id="cb3-59"><a href="#cb3-59" tabindex="-1"></a>  theta_hat[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">mean</span>(fg)</span>
+<span id="cb3-60"><a href="#cb3-60" tabindex="-1"></a></span>
+<span id="cb3-61"><a href="#cb3-61" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rgamma</span>(m, <span class="dv">3</span>, <span class="dv">2</span>)</span>
+<span id="cb3-62"><a href="#cb3-62" tabindex="-1"></a>  fg <span class="ot">&lt;-</span> <span class="fu">g_function</span>(x) <span class="sc">/</span> <span class="fu">f2_function</span>(x)</span>
+<span id="cb3-63"><a href="#cb3-63" tabindex="-1"></a>  theta_hat[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">mean</span>(fg)</span>
+<span id="cb3-64"><a href="#cb3-64" tabindex="-1"></a>  </span>
+<span id="cb3-65"><a href="#cb3-65" tabindex="-1"></a>  <span class="fu">return</span>(theta_hat)</span>
+<span id="cb3-66"><a href="#cb3-66" tabindex="-1"></a>}</span>
+<span id="cb3-67"><a href="#cb3-67" tabindex="-1"></a></span>
+<span id="cb3-68"><a href="#cb3-68" tabindex="-1"></a><span class="co"># Main execution</span></span>
+<span id="cb3-69"><a href="#cb3-69" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="fl">0.1</span>)</span>
+<span id="cb3-70"><a href="#cb3-70" tabindex="-1"></a><span class="fu">plot_density_functions</span>(x)  <span class="co"># Plot the density functions</span></span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>se_results <span class="ot">&lt;-</span> <span class="fu">calculate_standard_errors</span>(m)  <span class="co"># Calculate standard errors</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="fu">print</span>(se_results)  <span class="co"># Print the corresponding standard errors</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co">#&gt; [1] 0.33531 0.30112</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>theta_hat_results <span class="ot">&lt;-</span> <span class="fu">monte_carlo_estimate</span>(m)  <span class="co"># Monte Carlo estimate</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>phi <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">2</span> <span class="sc">*</span> pi)) <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="dv">1</span> <span class="sc">/</span> <span class="dv">2</span>) <span class="sc">+</span> <span class="dv">1</span> <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="dv">1</span>)  <span class="co"># Real value of the integral</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">round</span>(<span class="fu">c</span>(theta_hat_results, phi), <span class="dv">5</span>))  <span class="co"># Print the results</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="co">#&gt; [1] 0.39737 0.40227 0.40063</span></span></code></pre></div>
+<p>In Figure 2, the function that exhibits the most consistent ratio
+<span class="math inline">\(g(x)/f(x)\)</span> is identified as <span class="math inline">\(f2\)</span>. The graphical representations suggest
+a preference for <span class="math inline">\(f2\)</span> due to its
+associated smaller variance. Furthermore, the results derived from the
+standard error calculations confirm that <span class="math inline">\(f2\)</span> yields a lower variance compared to
+<span class="math inline">\(f1\)</span>.</p>
+<p>To obtain a Monte Carlo estimate of the integral <span class="math inline">\(\int_1^{\infty} \frac{x^{2}}{\sqrt{2\pi}}
+e^{-\frac{x^{2}}{2}}\,dx\)</span> through importance sampling, I
+employed the functions <span class="math inline">\(f1\)</span> and <span class="math inline">\(f2\)</span>. The Monte Carlo estimates closely
+align with the actual value of the integral (approximately 0.40063),
+indicating the effectiveness of the chosen importance sampling
+methods.</p>
+</div>
+<div id="hw2-exercise" class="section level2">
+<h2>HW2 EXERCISE</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># Clear memory</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co"># Load necessary library</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="co"># Function to time the sorting algorithm</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>time_sorting <span class="ot">&lt;-</span> <span class="cf">function</span>(n) {</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>  data <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>n)  <span class="co"># Generate a random permutation</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>  start_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>  <span class="fu">sort</span>(data)  <span class="co"># Sort using built-in quicksort</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>  end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">as.numeric</span>(end_time <span class="sc">-</span> start_time))</span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>}</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="co"># Function to perform simulations and calculate average times</span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a>average_sorting_time <span class="ot">&lt;-</span> <span class="cf">function</span>(n, num_simulations) {</span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a>  times <span class="ot">&lt;-</span> <span class="fu">numeric</span>(num_simulations)</span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>num_simulations) {</span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a>    times[j] <span class="ot">&lt;-</span> <span class="fu">time_sorting</span>(n)</span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>  }</span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">mean</span>(times))</span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a>}</span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a><span class="co"># Function to run the Monte Carlo experiment</span></span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a>run_experiment <span class="ot">&lt;-</span> <span class="cf">function</span>(n_values, num_simulations) {</span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a>  average_times <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">length</span>(n_values))</span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a>  t_n <span class="ot">&lt;-</span> n_values <span class="sc">*</span> <span class="fu">log</span>(n_values)</span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a>  </span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(n_values)) {</span>
+<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a>    average_times[i] <span class="ot">&lt;-</span> <span class="fu">average_sorting_time</span>(n_values[i], num_simulations)</span>
+<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a>  }</span>
+<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a>  </span>
+<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a>  results <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">n =</span> n_values, <span class="at">a_n =</span> average_times, <span class="at">t_n =</span> t_n)</span>
+<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a>  </span>
+<span id="cb5-36"><a href="#cb5-36" tabindex="-1"></a>  <span class="co"># Perform linear regression</span></span>
+<span id="cb5-37"><a href="#cb5-37" tabindex="-1"></a>  model <span class="ot">&lt;-</span> <span class="fu">lm</span>(a_n <span class="sc">~</span> t_n, <span class="at">data =</span> results)</span>
+<span id="cb5-38"><a href="#cb5-38" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">results =</span> results, <span class="at">model =</span> model))</span>
+<span id="cb5-39"><a href="#cb5-39" tabindex="-1"></a>}</span>
+<span id="cb5-40"><a href="#cb5-40" tabindex="-1"></a></span>
+<span id="cb5-41"><a href="#cb5-41" tabindex="-1"></a><span class="co"># Parameters</span></span>
+<span id="cb5-42"><a href="#cb5-42" tabindex="-1"></a>n_values <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span><span class="sc">^</span><span class="dv">4</span>, <span class="dv">2</span> <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">4</span>, <span class="dv">4</span> <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">4</span>, <span class="dv">6</span> <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">4</span>, <span class="dv">8</span> <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">4</span>)</span>
+<span id="cb5-43"><a href="#cb5-43" tabindex="-1"></a>num_simulations <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb5-44"><a href="#cb5-44" tabindex="-1"></a></span>
+<span id="cb5-45"><a href="#cb5-45" tabindex="-1"></a><span class="co"># Run the experiment</span></span>
+<span id="cb5-46"><a href="#cb5-46" tabindex="-1"></a>experiment_results <span class="ot">&lt;-</span> <span class="fu">run_experiment</span>(n_values, num_simulations)</span>
+<span id="cb5-47"><a href="#cb5-47" tabindex="-1"></a></span>
+<span id="cb5-48"><a href="#cb5-48" tabindex="-1"></a><span class="co"># Print summary of the regression model</span></span>
+<span id="cb5-49"><a href="#cb5-49" tabindex="-1"></a><span class="fu">summary</span>(experiment_results<span class="sc">$</span>model)</span>
+<span id="cb5-50"><a href="#cb5-50" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb5-51"><a href="#cb5-51" tabindex="-1"></a><span class="co">#&gt; Call:</span></span>
+<span id="cb5-52"><a href="#cb5-52" tabindex="-1"></a><span class="co">#&gt; lm(formula = a_n ~ t_n, data = results)</span></span>
+<span id="cb5-53"><a href="#cb5-53" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb5-54"><a href="#cb5-54" tabindex="-1"></a><span class="co">#&gt; Residuals:</span></span>
+<span id="cb5-55"><a href="#cb5-55" tabindex="-1"></a><span class="co">#&gt;          1          2          3          4          5 </span></span>
+<span id="cb5-56"><a href="#cb5-56" tabindex="-1"></a><span class="co">#&gt; -9.231e-06 -2.574e-05  7.985e-05 -5.199e-05  7.113e-06 </span></span>
+<span id="cb5-57"><a href="#cb5-57" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb5-58"><a href="#cb5-58" tabindex="-1"></a><span class="co">#&gt; Coefficients:</span></span>
+<span id="cb5-59"><a href="#cb5-59" tabindex="-1"></a><span class="co">#&gt;               Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
+<span id="cb5-60"><a href="#cb5-60" tabindex="-1"></a><span class="co">#&gt; (Intercept) -1.480e-06  4.696e-05  -0.032 0.976841    </span></span>
+<span id="cb5-61"><a href="#cb5-61" tabindex="-1"></a><span class="co">#&gt; t_n          1.307e-09  8.634e-11  15.139 0.000626 ***</span></span>
+<span id="cb5-62"><a href="#cb5-62" tabindex="-1"></a><span class="co">#&gt; ---</span></span>
+<span id="cb5-63"><a href="#cb5-63" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span>
+<span id="cb5-64"><a href="#cb5-64" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb5-65"><a href="#cb5-65" tabindex="-1"></a><span class="co">#&gt; Residual standard error: 5.738e-05 on 3 degrees of freedom</span></span>
+<span id="cb5-66"><a href="#cb5-66" tabindex="-1"></a><span class="co">#&gt; Multiple R-squared:  0.9871, Adjusted R-squared:  0.9828 </span></span>
+<span id="cb5-67"><a href="#cb5-67" tabindex="-1"></a><span class="co">#&gt; F-statistic: 229.2 on 1 and 3 DF,  p-value: 0.0006258</span></span>
+<span id="cb5-68"><a href="#cb5-68" tabindex="-1"></a></span>
+<span id="cb5-69"><a href="#cb5-69" tabindex="-1"></a><span class="co"># Plot scatter plot with regression line</span></span>
+<span id="cb5-70"><a href="#cb5-70" tabindex="-1"></a><span class="fu">ggplot</span>(experiment_results<span class="sc">$</span>results, <span class="fu">aes</span>(<span class="at">x =</span> t_n, <span class="at">y =</span> a_n)) <span class="sc">+</span></span>
+<span id="cb5-71"><a href="#cb5-71" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb5-72"><a href="#cb5-72" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb5-73"><a href="#cb5-73" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Computation Time vs n log(n)&quot;</span>,</span>
+<span id="cb5-74"><a href="#cb5-74" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;t_n = n log(n)&quot;</span>,</span>
+<span id="cb5-75"><a href="#cb5-75" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Average Computation Time (seconds)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb5-76"><a href="#cb5-76" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb5-77"><a href="#cb5-77" tabindex="-1"></a><span class="co">#&gt; `geom_smooth()` using formula = &#39;y ~ x&#39;</span></span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>We can see a significant linear relationship between <span class="math inline">\(a_n\)</span> and <span class="math inline">\(t_n\)</span>.</p>
+</div>
+<div id="section-3" class="section level2">
+<h2>6.6</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co"># Clear memory</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="co"># Function to generate skewness coefficients</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>calculate_skewness <span class="ot">&lt;-</span> <span class="cf">function</span>(n, m) {</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>  xbar <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n)</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>  m3 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n)</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>  m2 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n)</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>  v <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n)</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) {</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>    x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(m, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="dv">6</span> <span class="sc">/</span> n))</span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>    xbar[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(x)</span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>    m3[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>((x <span class="sc">-</span> xbar[i])<span class="sc">^</span><span class="dv">3</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a>    m2[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>((x <span class="sc">-</span> xbar[i])<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a>    v[i] <span class="ot">&lt;-</span> m3[i] <span class="sc">/</span> (m2[i]<span class="sc">^</span><span class="fl">1.5</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a>  }</span>
+<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a>  </span>
+<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a>  <span class="fu">return</span>(v)</span>
+<span id="cb6-20"><a href="#cb6-20" tabindex="-1"></a>}</span>
+<span id="cb6-21"><a href="#cb6-21" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a><span class="co"># Function to compute quantiles and standard errors</span></span>
+<span id="cb6-23"><a href="#cb6-23" tabindex="-1"></a>compute_quantiles_and_errors <span class="ot">&lt;-</span> <span class="cf">function</span>(v, q, n) {</span>
+<span id="cb6-24"><a href="#cb6-24" tabindex="-1"></a>  u <span class="ot">&lt;-</span> <span class="fu">sort</span>(v)</span>
+<span id="cb6-25"><a href="#cb6-25" tabindex="-1"></a>  gq <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">length</span>(q))</span>
+<span id="cb6-26"><a href="#cb6-26" tabindex="-1"></a>  lsq <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">length</span>(q))</span>
+<span id="cb6-27"><a href="#cb6-27" tabindex="-1"></a>  f <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">length</span>(q))</span>
+<span id="cb6-28"><a href="#cb6-28" tabindex="-1"></a>  ssd <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">length</span>(q))</span>
+<span id="cb6-29"><a href="#cb6-29" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="#cb6-30" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="fu">seq_along</span>(q)) {</span>
+<span id="cb6-31"><a href="#cb6-31" tabindex="-1"></a>    gq[j] <span class="ot">&lt;-</span> u[n <span class="sc">*</span> q[j]]</span>
+<span id="cb6-32"><a href="#cb6-32" tabindex="-1"></a>    lsq[j] <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(q[j], <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="dv">6</span> <span class="sc">/</span> n))</span>
+<span id="cb6-33"><a href="#cb6-33" tabindex="-1"></a>    f[j] <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">*</span> (<span class="dv">6</span> <span class="sc">/</span> n))) <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span>gq[j]<span class="sc">^</span><span class="dv">2</span> <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> (<span class="dv">6</span> <span class="sc">/</span> n)))</span>
+<span id="cb6-34"><a href="#cb6-34" tabindex="-1"></a>    ssd[j] <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(q[j] <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> q[j]) <span class="sc">/</span> (n <span class="sc">*</span> f[j]<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb6-35"><a href="#cb6-35" tabindex="-1"></a>  }</span>
+<span id="cb6-36"><a href="#cb6-36" tabindex="-1"></a>  </span>
+<span id="cb6-37"><a href="#cb6-37" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">data.frame</span>(gq, lsq, ssd))</span>
+<span id="cb6-38"><a href="#cb6-38" tabindex="-1"></a>}</span>
+<span id="cb6-39"><a href="#cb6-39" tabindex="-1"></a></span>
+<span id="cb6-40"><a href="#cb6-40" tabindex="-1"></a>table_print <span class="ot">&lt;-</span> <span class="cf">function</span>(table){</span>
+<span id="cb6-41"><a href="#cb6-41" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(table)</span>
+<span id="cb6-42"><a href="#cb6-42" tabindex="-1"></a>}</span>
+<span id="cb6-43"><a href="#cb6-43" tabindex="-1"></a></span>
+<span id="cb6-44"><a href="#cb6-44" tabindex="-1"></a><span class="co"># Main execution</span></span>
+<span id="cb6-45"><a href="#cb6-45" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb6-46"><a href="#cb6-46" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb6-47"><a href="#cb6-47" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb6-48"><a href="#cb6-48" tabindex="-1"></a></span>
+<span id="cb6-49"><a href="#cb6-49" tabindex="-1"></a><span class="co"># Calculate skewness coefficients</span></span>
+<span id="cb6-50"><a href="#cb6-50" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">calculate_skewness</span>(n, m)</span>
+<span id="cb6-51"><a href="#cb6-51" tabindex="-1"></a></span>
+<span id="cb6-52"><a href="#cb6-52" tabindex="-1"></a><span class="co"># Define quantiles to compute</span></span>
+<span id="cb6-53"><a href="#cb6-53" tabindex="-1"></a>quantiles <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.05</span>, <span class="fl">0.95</span>, <span class="fl">0.975</span>)</span>
+<span id="cb6-54"><a href="#cb6-54" tabindex="-1"></a></span>
+<span id="cb6-55"><a href="#cb6-55" tabindex="-1"></a><span class="co"># Compute quantiles and standard errors</span></span>
+<span id="cb6-56"><a href="#cb6-56" tabindex="-1"></a>comparison <span class="ot">&lt;-</span> <span class="fu">compute_quantiles_and_errors</span>(v, quantiles, n)</span>
+<span id="cb6-57"><a href="#cb6-57" tabindex="-1"></a></span>
+<span id="cb6-58"><a href="#cb6-58" tabindex="-1"></a><span class="co"># Display results in a table</span></span>
+<span id="cb6-59"><a href="#cb6-59" tabindex="-1"></a><span class="fu">table_print</span>(comparison)</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">gq</th>
+<th align="right">lsq</th>
+<th align="right">ssd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">-0.1500233</td>
+<td align="right">-0.1518182</td>
+<td align="right">0.0062545</td>
+</tr>
+<tr class="even">
+<td align="right">-0.1284425</td>
+<td align="right">-0.1274098</td>
+<td align="right">0.0052915</td>
+</tr>
+<tr class="odd">
+<td align="right">0.1203948</td>
+<td align="right">0.1274098</td>
+<td align="right">0.0044782</td>
+</tr>
+<tr class="even">
+<td align="right">0.1544270</td>
+<td align="right">0.1518182</td>
+<td align="right">0.0069938</td>
+</tr>
+</tbody>
+</table>
+<p>The results obtained from running the code indicate that the
+estimated quantiles closely align with those derived from the large
+sample approximation <span class="math inline">\(\sqrt{b_{1}} \approx
+N(0, 6/n)\)</span>. Additionally, the standard errors associated with
+these estimates are notably small, suggesting a high level of precision
+in the quantile estimations. This consistency reinforces the validity of
+the large sample approximation in this context.</p>
+</div>
+<div id="b" class="section level2">
+<h2>6.B</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># Clear memory</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="co"># Load necessary library</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="co"># Function to calculate power for Pearson correlation</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>calculate_pearson_power <span class="ot">&lt;-</span> <span class="cf">function</span>(n, m, correlations) {</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  power.p <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">length</span>(correlations))</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(correlations)) {</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>    p.p <span class="ot">&lt;-</span> <span class="fu">replicate</span>(m, {</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>      x <span class="ot">&lt;-</span> <span class="fu">mvrnorm</span>(n, <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, correlations[i], correlations[i], <span class="dv">1</span>), <span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>      cortest <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(x[, <span class="dv">1</span>], x[, <span class="dv">2</span>], <span class="at">alternative =</span> <span class="st">&quot;two.sided&quot;</span>, <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>      cortest<span class="sc">$</span>p.value</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a>    })</span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a>    power.p[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(p.p <span class="sc">&lt;=</span> <span class="fl">0.05</span>)</span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a>  }</span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a>  <span class="fu">return</span>(power.p)</span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a>}</span>
+<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a><span class="co"># Function to calculate power for Spearman&#39;s rank correlation</span></span>
+<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a>calculate_spearman_power <span class="ot">&lt;-</span> <span class="cf">function</span>(n, m, correlations) {</span>
+<span id="cb7-23"><a href="#cb7-23" tabindex="-1"></a>  power.s <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">length</span>(correlations))</span>
+<span id="cb7-24"><a href="#cb7-24" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(correlations)) {</span>
+<span id="cb7-25"><a href="#cb7-25" tabindex="-1"></a>    p.s <span class="ot">&lt;-</span> <span class="fu">replicate</span>(m, {</span>
+<span id="cb7-26"><a href="#cb7-26" tabindex="-1"></a>      x <span class="ot">&lt;-</span> <span class="fu">mvrnorm</span>(n, <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, correlations[i], correlations[i], <span class="dv">1</span>), <span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb7-27"><a href="#cb7-27" tabindex="-1"></a>      cortest <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(x[, <span class="dv">1</span>], x[, <span class="dv">2</span>], <span class="at">alternative =</span> <span class="st">&quot;two.sided&quot;</span>, <span class="at">method =</span> <span class="st">&quot;spearman&quot;</span>)</span>
+<span id="cb7-28"><a href="#cb7-28" tabindex="-1"></a>      cortest<span class="sc">$</span>p.value</span>
+<span id="cb7-29"><a href="#cb7-29" tabindex="-1"></a>    })</span>
+<span id="cb7-30"><a href="#cb7-30" tabindex="-1"></a>    power.s[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(p.s <span class="sc">&lt;=</span> <span class="fl">0.05</span>)</span>
+<span id="cb7-31"><a href="#cb7-31" tabindex="-1"></a>  }</span>
+<span id="cb7-32"><a href="#cb7-32" tabindex="-1"></a>  <span class="fu">return</span>(power.s)</span>
+<span id="cb7-33"><a href="#cb7-33" tabindex="-1"></a>}</span>
+<span id="cb7-34"><a href="#cb7-34" tabindex="-1"></a></span>
+<span id="cb7-35"><a href="#cb7-35" tabindex="-1"></a><span class="co"># Function to calculate power for Kendall&#39;s coefficient</span></span>
+<span id="cb7-36"><a href="#cb7-36" tabindex="-1"></a>calculate_kendall_power <span class="ot">&lt;-</span> <span class="cf">function</span>(n, m, correlations) {</span>
+<span id="cb7-37"><a href="#cb7-37" tabindex="-1"></a>  power.k <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">length</span>(correlations))</span>
+<span id="cb7-38"><a href="#cb7-38" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(correlations)) {</span>
+<span id="cb7-39"><a href="#cb7-39" tabindex="-1"></a>    p.k <span class="ot">&lt;-</span> <span class="fu">replicate</span>(m, {</span>
+<span id="cb7-40"><a href="#cb7-40" tabindex="-1"></a>      x <span class="ot">&lt;-</span> <span class="fu">mvrnorm</span>(n, <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, correlations[i], correlations[i], <span class="dv">1</span>), <span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb7-41"><a href="#cb7-41" tabindex="-1"></a>      cortest <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(x[, <span class="dv">1</span>], x[, <span class="dv">2</span>], <span class="at">alternative =</span> <span class="st">&quot;two.sided&quot;</span>, <span class="at">method =</span> <span class="st">&quot;kendall&quot;</span>)</span>
+<span id="cb7-42"><a href="#cb7-42" tabindex="-1"></a>      cortest<span class="sc">$</span>p.value</span>
+<span id="cb7-43"><a href="#cb7-43" tabindex="-1"></a>    })</span>
+<span id="cb7-44"><a href="#cb7-44" tabindex="-1"></a>    power.k[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(p.k <span class="sc">&lt;=</span> <span class="fl">0.05</span>)</span>
+<span id="cb7-45"><a href="#cb7-45" tabindex="-1"></a>  }</span>
+<span id="cb7-46"><a href="#cb7-46" tabindex="-1"></a>  <span class="fu">return</span>(power.k)</span>
+<span id="cb7-47"><a href="#cb7-47" tabindex="-1"></a>}</span>
+<span id="cb7-48"><a href="#cb7-48" tabindex="-1"></a></span>
+<span id="cb7-49"><a href="#cb7-49" tabindex="-1"></a><span class="co"># Main execution</span></span>
+<span id="cb7-50"><a href="#cb7-50" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb7-51"><a href="#cb7-51" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb7-52"><a href="#cb7-52" tabindex="-1"></a>correlations <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="sc">-</span><span class="fl">0.9</span>, <span class="sc">-</span><span class="fl">0.1</span>, <span class="fl">0.1</span>), <span class="fu">seq</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="fl">0.1</span>))</span>
+<span id="cb7-53"><a href="#cb7-53" tabindex="-1"></a></span>
+<span id="cb7-54"><a href="#cb7-54" tabindex="-1"></a><span class="co"># Calculate powers</span></span>
+<span id="cb7-55"><a href="#cb7-55" tabindex="-1"></a>power.p <span class="ot">&lt;-</span> <span class="fu">calculate_pearson_power</span>(n, m, correlations)</span>
+<span id="cb7-56"><a href="#cb7-56" tabindex="-1"></a>power.s <span class="ot">&lt;-</span> <span class="fu">calculate_spearman_power</span>(n, m, correlations)</span>
+<span id="cb7-57"><a href="#cb7-57" tabindex="-1"></a>power.k <span class="ot">&lt;-</span> <span class="fu">calculate_kendall_power</span>(n, m, correlations)</span>
+<span id="cb7-58"><a href="#cb7-58" tabindex="-1"></a></span>
+<span id="cb7-59"><a href="#cb7-59" tabindex="-1"></a><span class="co"># Combine results into a data frame</span></span>
+<span id="cb7-60"><a href="#cb7-60" tabindex="-1"></a>power_results <span class="ot">&lt;-</span> <span class="fu">cbind</span>(power.p, power.s, power.k)</span>
+<span id="cb7-61"><a href="#cb7-61" tabindex="-1"></a><span class="fu">rownames</span>(power_results) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="sc">-</span><span class="fl">0.9</span>, <span class="sc">-</span><span class="fl">0.1</span>, <span class="fl">0.1</span>), <span class="fu">seq</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="fl">0.1</span>))</span>
+<span id="cb7-62"><a href="#cb7-62" tabindex="-1"></a><span class="fu">print</span>(power_results)</span>
+<span id="cb7-63"><a href="#cb7-63" tabindex="-1"></a><span class="co">#&gt;      power.p power.s power.k</span></span>
+<span id="cb7-64"><a href="#cb7-64" tabindex="-1"></a><span class="co">#&gt; -0.9   1.000   1.000   0.999</span></span>
+<span id="cb7-65"><a href="#cb7-65" tabindex="-1"></a><span class="co">#&gt; -0.8   0.995   0.984   0.990</span></span>
+<span id="cb7-66"><a href="#cb7-66" tabindex="-1"></a><span class="co">#&gt; -0.7   0.945   0.915   0.912</span></span>
+<span id="cb7-67"><a href="#cb7-67" tabindex="-1"></a><span class="co">#&gt; -0.6   0.831   0.774   0.729</span></span>
+<span id="cb7-68"><a href="#cb7-68" tabindex="-1"></a><span class="co">#&gt; -0.5   0.604   0.578   0.553</span></span>
+<span id="cb7-69"><a href="#cb7-69" tabindex="-1"></a><span class="co">#&gt; -0.4   0.458   0.381   0.340</span></span>
+<span id="cb7-70"><a href="#cb7-70" tabindex="-1"></a><span class="co">#&gt; -0.3   0.232   0.226   0.219</span></span>
+<span id="cb7-71"><a href="#cb7-71" tabindex="-1"></a><span class="co">#&gt; -0.2   0.139   0.125   0.104</span></span>
+<span id="cb7-72"><a href="#cb7-72" tabindex="-1"></a><span class="co">#&gt; -0.1   0.059   0.071   0.064</span></span>
+<span id="cb7-73"><a href="#cb7-73" tabindex="-1"></a><span class="co">#&gt; 0.1    0.050   0.068   0.068</span></span>
+<span id="cb7-74"><a href="#cb7-74" tabindex="-1"></a><span class="co">#&gt; 0.2    0.132   0.110   0.122</span></span>
+<span id="cb7-75"><a href="#cb7-75" tabindex="-1"></a><span class="co">#&gt; 0.3    0.274   0.219   0.217</span></span>
+<span id="cb7-76"><a href="#cb7-76" tabindex="-1"></a><span class="co">#&gt; 0.4    0.417   0.391   0.374</span></span>
+<span id="cb7-77"><a href="#cb7-77" tabindex="-1"></a><span class="co">#&gt; 0.5    0.655   0.570   0.577</span></span>
+<span id="cb7-78"><a href="#cb7-78" tabindex="-1"></a><span class="co">#&gt; 0.6    0.839   0.770   0.773</span></span>
+<span id="cb7-79"><a href="#cb7-79" tabindex="-1"></a><span class="co">#&gt; 0.7    0.954   0.899   0.917</span></span>
+<span id="cb7-80"><a href="#cb7-80" tabindex="-1"></a><span class="co">#&gt; 0.8    0.995   0.989   0.985</span></span>
+<span id="cb7-81"><a href="#cb7-81" tabindex="-1"></a><span class="co">#&gt; 0.9    0.999   1.000   1.000</span></span></code></pre></div>
+<p>The nonparametric tests based on <span class="math inline">\(\rho_s\)</span> or <span class="math inline">\(\tau\)</span> are less powerful than the
+correlation test when the sampled distribution is bivariate normal.</p>
+<p>If <span class="math inline">\(X\sim exp(4)\)</span> and <span class="math inline">\(Y\sim U(0,1)\)</span> , clearly <span class="math inline">\(X,Y\)</span> are dependent.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>p.p1 <span class="ot">&lt;-</span> <span class="fu">replicate</span>(m, <span class="at">expr =</span> {</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rexp</span>(n, <span class="dv">4</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">runif</span>(n, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>  cortest <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(x, y, <span class="at">alternative =</span> <span class="st">&quot;two.sided&quot;</span>, <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>  cortest<span class="sc">$</span>p.value } )</span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>power.p1 <span class="ot">&lt;-</span> <span class="fu">mean</span>(  p.p1 <span class="sc">&lt;=</span> <span class="fl">0.05</span> )</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>power.p1</span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a><span class="co">#&gt; [1] 0.048</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>p.s1 <span class="ot">&lt;-</span> <span class="fu">replicate</span>(m, <span class="at">expr =</span> {</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rexp</span>(n, <span class="dv">4</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">runif</span>(n, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>  cortest <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(x, y, <span class="at">alternative =</span> <span class="st">&quot;two.sided&quot;</span>, <span class="at">method =</span> <span class="st">&quot;spearman&quot;</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>  cortest<span class="sc">$</span>p.value } )</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>power.s1 <span class="ot">&lt;-</span> <span class="fu">mean</span>(  p.s1 <span class="sc">&lt;=</span> <span class="fl">0.05</span> )</span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a>power.s1</span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a><span class="co">#&gt; [1] 0.056</span></span></code></pre></div>
+<p>In this case, the empirical power of the nonparametric test
+Spearman’s rank correlation coefficient <span class="math inline">\(\rho_s= 0.056\)</span>, which is bigger than the
+empirical power of Pearson correlation <span class="math inline">\(\rho=0.048\)</span>.</p>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
