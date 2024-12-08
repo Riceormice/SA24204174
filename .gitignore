@@ -1,6 +1,5 @@
-inst/doc
-/doc/
-/Meta/
+doc
+Meta
 .Rproj.user
 src/*.o
 src/*.so
